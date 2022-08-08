@@ -1,0 +1,68 @@
+@import "../../styles/vars.scss";
+
+.customSelect {
+  &__control {
+    align-items: center;
+    width: 110px !important;
+    height: 44px !important;
+    background-color: rgb(254, 254, 254) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px $bgColor solid !important;
+    border-right: none !important;
+  }
+
+  &__menu {
+    margin-top: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    animation: scaleIn 0.1s ease-in-out !important;
+    transform: translateX(1px) !important;
+    width: calc(100% - 1px) !important;
+  }
+
+  &__menu-list {
+    padding: 0 !important;
+  }
+
+  &__indicator-separator {
+    display: none !important;
+  }
+
+  &__indicators {
+    cursor: pointer !important;
+  }
+
+  &__indicator {
+    padding: 0 5px 0 0 !important;
+    color: rgb(115, 115, 115) !important;
+
+    &:hover {
+      color: $textColor !important;
+    }
+  }
+
+  &__option {
+    background-color: rgb(255, 255, 255) !important;
+    color: $textColor !important;
+    cursor: pointer !important;
+    &--is-focused {
+      background-color: lighten(rgb(212, 228, 236), 2%) !important;
+      color: $textColor !important;
+    }
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../styles/vars.scss";
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.row__data {
+  display: grid;
+  border: 2px solid $bgColor;
+  padding: 0.4em 0;
+}

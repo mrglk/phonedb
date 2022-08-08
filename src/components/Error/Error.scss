@@ -1,0 +1,14 @@
+@import "../../styles/vars.scss";
+
+.error {
+  display: flex;
+  justify-content: flex-start;
+  min-height: 30px;
+  margin-top: 5px;
+}
+
+.error__message {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(214, 69, 69);
+}

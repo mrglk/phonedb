@@ -1,0 +1,86 @@
+@import "../../styles/vars.scss";
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: min-content;
+  font-size: 16px;
+}
+
+.form__inputs {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.form__select {
+  height: 44px;
+  border: 1px $bgColor solid;
+  border-right: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form__input {
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px $bgColor solid;
+  border-radius: 0;
+  font-size: 1rem;
+  padding-left: 5px;
+  -webkit-margin-start: -0.3px;
+  -webkit-margin-end: -2px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &_error {
+    border: 1px rgb(198, 117, 117) solid;
+  }
+}
+
+.form__button {
+  flex-grow: 1;
+  height: 42px;
+  padding: 0 1.5em;
+  margin-top: 1px;
+  border: none;
+  background-color: $textColor;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-weight: 700;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form__input,
+.form__button {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    flex-wrap: wrap;
+  }
+
+  .form__input,
+  .form__button {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .form__input {
+    max-width: 130px;
+  }
+}

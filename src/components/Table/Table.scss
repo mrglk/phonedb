@@ -1,0 +1,22 @@
+@import "../../styles/vars.scss";
+
+.table {
+  display: grid;
+  border: 1px solid $bgColor;
+  background-color: white;
+  width: 220px;
+  margin-top: 1em;
+}
+
+.table__head {
+  display: grid;
+  background: $textColor;
+  color: rgb(255, 255, 255);
+  border: 2px solid $bgColor;
+}
+
+.table__headData {
+  display: grid;
+  text-align: center;
+  padding: 0.8em 0;
+}
