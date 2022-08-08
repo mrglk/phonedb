@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/phonedb/static/css/main.ef601ec8.css",
+    "main.js": "/phonedb/static/js/main.ce9f4753.js",
+    "index.html": "/phonedb/index.html",
+    "main.ef601ec8.css.map": "/phonedb/static/css/main.ef601ec8.css.map",
+    "main.ce9f4753.js.map": "/phonedb/static/js/main.ce9f4753.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef601ec8.css",
+    "static/js/main.ce9f4753.js"
+  ]
+}
