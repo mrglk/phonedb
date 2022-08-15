@@ -1,10 +1,11 @@
 import "./Form.scss";
 import * as cx from "classnames";
 import { phoneCodes } from "../../config";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setError, addPhone } from "../../stores";
+import { setError } from "../../stores";
 import SelectInput from "../SelectInput/SelectInput";
+import { postPhone } from "../../stores";
 
 export default function Form() {
   const dispatch = useDispatch();
@@ -48,8 +49,7 @@ export default function Form() {
 
       if (validate(inputValue)) {
         let fullPhone = codes[selectedCodeIndex].code + inputValue;
-
-        dispatch(addPhone(fullPhone));
+        dispatch(postPhone(fullPhone));
         setInputValue("");
         dispatch(setError(""));
       }
