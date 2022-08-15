@@ -12,7 +12,6 @@ const db = new sqlite.Database('./phones.db', sqlite.OPEN_READWRITE, (err) => {
 })
 
 const table = "CREATE TABLE IF NOT EXISTS phones(ID INTEGER PRIMARY KEY, phone)";
-
 db.run(table)
 
 const PORT = 3030;
@@ -81,5 +80,5 @@ app.get('/longpoll', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`App listening at http://localhost:${PORT}`);
+    console.log(`Server started at http://localhost:${PORT}`);
   });

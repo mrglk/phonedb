@@ -7,7 +7,7 @@ npm i
 npm start
 ```
 
-Open new terminal
+Открыть новый терминал
 
 ```
 cd phonedb/client

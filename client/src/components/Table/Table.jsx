@@ -1,7 +1,7 @@
 import "./Table.scss";
 import TableRow from "../TableRow/TableRow";
 import { uid } from "uid";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPhones } from "../../stores";
 import { API } from "../../http/phoneAPI";
@@ -15,7 +15,7 @@ export default function Table() {
     dispatch(fetchPhones());
   }, [dispatch]);
 
-  const subscribe = () => {
+  const subscribe = useCallback(() => {
     API.longpoll()
       .then(() => {
         dispatch(fetchPhones());
@@ -28,11 +28,11 @@ export default function Table() {
           subscribe();
         }, 100);
       });
-  };
+  }, [dispatch]);
 
   useEffect(() => {
     subscribe();
-  }, []);
+  }, [subscribe]);
 
   if (phones.length === 0) {
     return null;
